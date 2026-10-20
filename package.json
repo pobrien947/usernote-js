@@ -1,0 +1,56 @@
+{
+  "name": "usernote",
+  "version": "1.0.1",
+  "description": "Feature voting board and public roadmap for your app. Users suggest and vote on ideas without signing up. React component and a framework-free loader for UserNote.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./react": {
+      "types": "./react.d.ts",
+      "default": "./react.js"
+    }
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "react.js",
+    "react.d.ts"
+  ],
+  "sideEffects": false,
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "feedback",
+    "feedback-widget",
+    "feature-request",
+    "feature-voting",
+    "roadmap",
+    "public-roadmap",
+    "user-feedback",
+    "react",
+    "nextjs",
+    "vue",
+    "canny-alternative"
+  ],
+  "homepage": "https://getusernote.com/docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pobrien947/usernote-js.git"
+  },
+  "bugs": {
+    "email": "support@getusernote.com"
+  },
+  "author": "Patrick O'Brien (https://getusernote.com)",
+  "license": "MIT"
+}
