@@ -55,6 +55,7 @@ In the Next.js App Router you can use it directly in a Server Component layout: 
 | `inline` | boolean | `false` | Show the board in the page instead of a floating button |
 | `view` | `'ideas'` \| `'roadmap'` | `'ideas'` | Which view to open on |
 | `launcher` | boolean | `true` | `false` hides the floating button; call `open()` yourself |
+| `position` | `'right'` \| `'left'` | `'right'` | Corner for the floating button and panel |
 | `className`, `style` | | | For the inline board's container |
 
 ## Vue, Svelte or plain JavaScript

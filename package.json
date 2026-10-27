@@ -1,6 +1,6 @@
 {
   "name": "usernote",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Feature voting board and public roadmap for your app. Users suggest and vote on ideas without signing up. React component and a framework-free loader for UserNote.",
   "type": "module",
   "exports": {

@@ -7,6 +7,8 @@ export interface MountOptions {
   view?: 'ideas' | 'roadmap';
   /** false hides the floating Feedback button; open the board with open() from your own button. */
   launcher?: boolean;
+  /** Corner for the floating button and panel: bottom right (default) or bottom left. */
+  position?: 'right' | 'left';
   /** Widget URL, for testing. Defaults to https://getusernote.com/widget.js. */
   src?: string;
 }

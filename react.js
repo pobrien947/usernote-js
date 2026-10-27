@@ -15,12 +15,13 @@ export { open, close } from './index.js';
  * @param {boolean} [props.inline] Show the board in the page instead of a floating button.
  * @param {'ideas' | 'roadmap'} [props.view] Open on the ideas list (default) or the roadmap.
  * @param {boolean} [props.launcher] false hides the floating button; call open() from your own button.
+ * @param {'right' | 'left'} [props.position] Corner for the floating button and panel (default bottom right).
  * @param {string} [props.className] Class for the inline board's container.
  * @param {object} [props.style] Style for the inline board's container.
  */
-export function UserNote({ board, inline = false, view, launcher, className, style }) {
+export function UserNote({ board, inline = false, view, launcher, position, className, style }) {
   const ref = useRef(null);
-  useEffect(() => mount({ board, view, launcher, target: inline ? ref.current : undefined }), [board, inline, view, launcher]);
+  useEffect(() => mount({ board, view, launcher, position, target: inline ? ref.current : undefined }), [board, inline, view, launcher, position]);
   return inline ? createElement('div', { ref, className, style }) : null;
 }
 

@@ -46,10 +46,11 @@ function remove(key, entry) {
  * @param {string | Element} [options.target] Show the board inside this element (or selector) instead of a floating Feedback button.
  * @param {'ideas' | 'roadmap'} [options.view] Open on the ideas list (default) or the roadmap.
  * @param {boolean} [options.launcher] false hides the Feedback button; open the board with open() from your own button.
+ * @param {'right' | 'left'} [options.position] Corner for the floating button and panel (default bottom right).
  * @param {string} [options.src] Widget URL, for testing.
  * @returns {() => void} Removes the widget again.
  */
-export function mount({ board, target, view, launcher, src = WIDGET_URL } = {}) {
+export function mount({ board, target, view, launcher, position, src = WIDGET_URL } = {}) {
   if (typeof document === 'undefined') return () => {}; // server rendering
   if (!BOARD_ID.test(String(board))) {
     console.warn(`[UserNote] "${board}" is not a board ID. Copy it from your board's Install tab: it starts with ws_.`);
@@ -63,6 +64,7 @@ export function mount({ board, target, view, launcher, src = WIDGET_URL } = {}) 
   }
   if (view === 'roadmap') attrs.view = 'roadmap';
   if (launcher === false) attrs.launcher = 'false';
+  if (position === 'left' && !target) attrs.position = 'left';
   const key = JSON.stringify([src, attrs]);
 
   let entry = live.get(key);
